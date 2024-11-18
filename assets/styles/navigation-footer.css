@@ -1,0 +1,359 @@
+header {
+  position: fixed;
+  top: -1px;
+  left: -1px;
+  width: 101%;
+  z-index: 20;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 12px 40px 10px;
+  transition: .35s ease;
+  -webkit-transition: .35s ease;
+  -moz-transition: .35s ease;
+}
+
+header nav.sticky{
+  background: var(--nav-color);
+  box-shadow: 2px 3px 5px rgba(0 0 0 / 10%);
+}
+
+#navbar.sticky :is(.logo h1, .logo span, .navlink){
+  color: var(--black);
+}
+
+#navbar.sticky .navlink::before,
+#navbar.sticky .menu__toggle span{
+  background: var(--black);
+}
+
+#navbar :is(.logo h1, .logo span, .navlink){
+  color: var(--white);
+}
+
+#navbar .navlink::before,
+#navbar .menu__toggle span{
+  background: var(--white);
+}
+
+header nav .logo{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  line-height: 1.1;
+}
+
+header nav .logo h1 {
+  color: var(--logo-color);
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+}
+
+header nav .logo span {
+  color: var(--logo-color);
+  font-size: .72rem;
+  font-weight: 400;
+}
+
+header nav .logo img {
+  position: relative;
+  top: 3px;
+  width: 54px;
+  height: 100%;
+  object-fit: cover;
+}
+
+header nav .nav__menu .nav__links{
+  display: flex;
+  align-items: center;
+}
+
+header nav .nav__links .navlink {
+  position: relative;
+  color: var(--navlinks);
+  margin: 0 10px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+header nav .nav__links .navlink::before{
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  background: var(--navlinks-underline);
+  transition: transform .35s ease;
+  -webkit-transition: transform .35s ease;
+  -moz-transition: transform .35s ease;
+}
+
+header nav .nav__links .navlink:is(:hover, .active)::before{
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+}
+
+header nav .menu__toggle {
+  display: none;
+  position: absolute;
+  top: 27px;
+  left: 25px;
+  cursor: pointer;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  z-index: 30;
+}
+
+header nav .menu__toggle:focus {
+  outline: none;
+}
+
+header nav .menu__toggle .hide {
+  display: none;
+}
+
+header nav .menu__toggle.active .first {
+  top: 8px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+
+header nav .menu__toggle.active .last {
+  top: 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+}
+
+header nav .menu__toggle span {
+  display: block;
+  position: relative;
+  bottom: 5px;
+  width: 26px;
+  height: 2px;
+  background: var(--menu-toggle);
+  border-radius: 40px;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+}
+
+header nav .menu__toggle span:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+
+.overlay{
+  display: none;
+}
+
+footer {
+  position: relative;
+  background: var(--bg-footer);
+  padding: 35px 0;
+}
+
+.shape{
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
+.shape svg{
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 90px;
+}
+
+.shape .shape-fill{
+  fill: #F8FCF5;
+}
+
+footer .container__footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0 100px;
+  max-width: 1000px;
+  margin: 80px auto;
+  margin-bottom: 30px;
+}
+
+.container__footer .logo__footer{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.logo__footer img{
+  width: 70px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo__footer .logo__name{
+  color: #ececec;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.logo__footer .logo__slogan{
+  color: #ececec;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.footer__links{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.footer__links h2{
+  color: #ececec;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.footer__links a{
+  color: #ececec;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer__links a:hover{
+  text-decoration: underline;
+}
+
+ .footer__inner{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 20px 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__inner::before{
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  width: 70%;
+  height: 2px;
+  background: #3d3d3db2;
+}
+
+.footer__inner div{
+  padding: 20px 0;
+}
+
+.footer__inner .icons{
+  display: inline;
+  margin-top: 30px;
+}
+
+.icons a{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #ececec;
+  width: max-content;
+
+  &:hover{
+    color: #a8a8a8;
+  }
+}
+
+.icons svg{
+  width: 28px;
+  height: 28px;
+}
+
+.icons span{
+  font-size: .9rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.copyright{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  text-align: center;
+}
+
+.copyright span{
+  color: #adacac;
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+.copyright small{
+  color: #adacac;
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+.copyright small a:hover{
+  text-decoration: underline;
+}
+
+.box-backTop{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box-backTop span{
+  color: #ececec;
+  font-size: 1rem;
+}
+
+.back-to-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #303030;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.back-to-top svg{
+  width: 32px;
+  height: 32px;
+  color: #ececec;
+}

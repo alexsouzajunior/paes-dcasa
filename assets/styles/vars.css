@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-main: "Poppins", sans-serif;
+  --white: #fff;
+  --black: #000;
+  --bg-footer: #181716;
+  
+  --body: #F8FCF5;
+  --nav-color: #fefefe;
+  --logo-color: #000;
+  --navlinks: #000;
+  --navlinks-underline: #000;
+  --menu-toggle: #000;
+  --navigation-menu: #fefefe;
+  --navigation-menu-underline: #000;
+
+  --background-skeleton: #e1e1e1;
+  --background-skeleton-color-primary: rgba(255, 255, 255, 0);
+  --background-skeleton-color-secondary: hsla(0, 0%, 100%, 0.25);
+
+  --font-hero-title: "Bree Serif", serif;
+  --hero-title-color: #202020;
+  --hero-paragraph-color: #404040;
+
+  --about-title: #2A292B;
+  --about-paragraph: #403E41;
+
+  --banner-background: #f0550df4;
+  --banner-two-background: #3E872E;
+  --banner-content-color: #eee3cd;
+  --banner-content-font: "Bree Serif", serif;
+
+  --icone-card-background: #ff822f;
+  --icone-color: #fff;
+  --heading-color: #202020;
+  --paragraph-color: #505050;
+
+  --testimonial-title: #2A292B;
+  --testimonial-heading-span: #4851a2;
+  --font-heading-span: "Leckerli One", cursive;
+
+  --testimonial-box: #fff;
+  --testimonial-name-client: #3d3d3d;
+  --testimonial-comment-client: #2b2b2b;
+}
